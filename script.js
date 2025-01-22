@@ -81,7 +81,7 @@ function displayGuess(guess)
     userInput.value = ''
     guessSlot.innerHTML += `${guess} `
     numGuess++;
-    remAttempts.innerHTML = `${10 - numGuess}`
+    remAttempts.innerHTML = `${11 - numGuess}`
 }
 
 function displayMsg(message)
@@ -110,10 +110,10 @@ function newGame()
         prevGuess = []
         numGuess = 1
         guessSlot.innerHTML = ''
-        remAttempts.innerHTML = `${10 - numGuess}`;
+        remAttempts.innerHTML = `${11 - numGuess}`;
         userInput.removeAttribute('disabled')
         startOver.removeChild(p)
-        
+        displayMsg('');
         playGame = true;
     })
 }
